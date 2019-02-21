@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Instant Data Scraper",
+  "version": "0.1.7",
+  "manifest_version": 2,
+  "description": "Web scraper crawls listing type data from multiple pages. Tested to scrape YP, Yelp, Ebay, Amazon, etc. Save as Excel or CSV.",
+  "browser_action": {
+    "default_icon": "pokeball64.png"
+  },
+  "permissions": [ "activeTab", "tabs", "webRequest", "<all_urls>",
+	  "https://ssl.google-analytics.com/*"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://code.jquery.com https://cdnjs.cloudflare.com https://fastcdn.org https://maxcdn.bootstrapcdn.com; object-src 'self'",
+  "icons": {
+    "16": "pokeball16.png",
+    "32": "pokeball32.png",
+    "64": "pokeball64.png",
+    "128": "pokeball128.png"
+  },
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["onload.css"],
+      "js": ["js/jquery-3.1.0.min.js", "onload.js"]
+    }
+  ]
+}

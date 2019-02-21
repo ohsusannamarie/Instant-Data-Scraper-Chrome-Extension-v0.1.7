@@ -1,0 +1,45 @@
+.btn, #delay, .alert  {
+    margin: 5px;
+}
+form {
+    margin-right: -5px;
+    margin-left: 5px;
+}
+.btn, .alert, #content {
+    display: none;
+}
+body {
+    padding-top: 15px;
+}
+#info {
+    margin-top: 10px;
+}
+#stats {
+    margin-top: 50px;
+}
+#wait-spider {
+    height: 150px;
+    margin-top: 20px;
+    text-align: center;
+}
+#wait {
+    margin: 20px;
+    text-align: center;
+}
+#help {
+    float: right;
+    margin-right: 5px;
+}
+
+.hot-header {
+    position: relative;
+}
+
+.remove-column {
+    position: absolute;
+    right: 0;
+}
+
+#hot {
+    overflow: hidden;
+}
